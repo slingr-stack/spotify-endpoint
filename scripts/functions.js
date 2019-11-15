@@ -1,11 +1,3 @@
-endpoint.testing = function (url) {
-
-    sys.logs.info("This is an endpoint example");
-
-    return endpoint.get(url);
-};
-
-
 /////////////////////////////////////
 // Public API - Generic Functions
 /////////////////////////////////////
