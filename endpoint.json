@@ -1,0 +1,62 @@
+{
+    "label": "Spotify",
+    "name": "spotify",
+    "apiVersion": "v1",
+    "internal": false,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": true
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/spotify.png",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [],
+    "functions": [
+        {
+            "label": "GET",
+            "name": "_get"
+        },
+        {
+            "label": "POST",
+            "name": "_post"
+        },
+        {
+            "label": "PATCH",
+            "name": "_patch"
+        },
+        {
+            "label": "PUT",
+            "name": "_put"
+        },
+        {
+            "label": "DELETE",
+            "name": "_delete"
+        }
+    ],
+    "scripts":[
+        "functions.js",
+        "spotify-helpers.js"
+    ],
+    "configuration":[
+        {
+            "label": "Client Id",
+            "name": "clientId",
+            "type": "text",
+            "required": true
+        },
+        {
+            "label": "Client Secret",
+            "name": "clientSecret",
+            "type": "password",
+            "required": true
+        }
+    ]
+}
