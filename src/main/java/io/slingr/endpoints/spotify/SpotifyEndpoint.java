@@ -30,8 +30,8 @@ public class SpotifyEndpoint extends HttpEndpoint {
 
     private static final String ACCESS_TOKEN = "access_token";
 
-    private String accessToken;
-    private long currentTime;
+    private static String accessToken;
+    private static long currentTime;
 
     @ApplicationLogger
     protected AppLogs appLogger;
@@ -51,7 +51,7 @@ public class SpotifyEndpoint extends HttpEndpoint {
     public void endpointStarted() {
         httpService().setupDefaultHeader("Content-Type", "application/json");
         httpService().setAllowExternalUrl(true);
-        httpService().setDebug(true);
+        httpService().setDebug(false);
 
         generateNewAccessToken();
     }
